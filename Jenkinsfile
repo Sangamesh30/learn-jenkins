@@ -2,15 +2,16 @@ pipeline {
 
     agent { node { label 'workstation' } }
 
-environment {
-   SSH = credentials('SSH')
-   DEMO_URL = "google.com"
+    environment {
+      SSH = credentials('SSH')
+      DEMO_URL = "google.com"
+    }
 
-options {
-  ansiColor('xterm')
-}
+    options {
+      ansiColor('xterm')
+    }
 
-}
+
     stages {
         stage('Hello-2') {
             steps {
@@ -20,9 +21,10 @@ options {
         }
     }
 
-    post{
-      always{
+    post {
+      always {
         sh 'echo post'
-         }
+      }
     }
+
 }
