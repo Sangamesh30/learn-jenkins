@@ -1,5 +1,6 @@
 pipeline {
-    agent any
+
+    agent { node { label 'workstation' } }
 
     stages {
         stage('Hello-2') {
@@ -7,5 +8,11 @@ pipeline {
                 echo 'Hello World'
             }
         }
+    }
+
+    post{
+      alwsys{
+        sh 'echo post'
+         }
     }
 }
