@@ -12,16 +12,17 @@ pipeline {
     }
 
      parameters {
-            string(name: 'APP_INPUT', defaultValue: , description: 'Just Input')
+       string(name: 'APP_INPUT', defaultValue: '', description: 'Just Input')
+     }
 
-    stages {
-        stage('Hello-2') {
-            steps {
-                echo 'Hello World'
-                sh 'env'
-            }
-        }
-    }
+       stages {
+       stage('Hello-2') {
+         steps {
+           echo 'Hello World'
+           sh 'env'
+         }
+       }
+     }
 
     post {
       always {
