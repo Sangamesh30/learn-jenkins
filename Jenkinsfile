@@ -11,7 +11,7 @@ pipeline {
     }
 
     post{
-      alwsys{
+      always{
         sh 'echo post'
          }
     }
