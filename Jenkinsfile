@@ -18,6 +18,11 @@ pipeline {
 
        stages {
        stage('Hello-2') {
+
+        input {
+                       message "Should we continue?"
+                       ok "Yes, we should."
+         }
          steps {
            echo 'Hello World'
            sh 'env'
